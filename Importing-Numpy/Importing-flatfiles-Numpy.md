@@ -13,5 +13,20 @@ data = np.loadtxt(filename, delimiter=',')
 data
 
 ```
+Most of the time the files that we need to import will have different datatypes in different columns. We could have `str`, `int` or `floats`. The function we were using `np.loadtxt` won't work properly, but we can use another function called `np.genfromtext()` which can handle multiple structures. 
 
+This function will create a `structure array` for the different types. Numpy have to contain elements that have the same type, and structured arrays allow to generate a 1D array that contains multiple format inside.
 
+Also, there's the function `np.recfromcsv()` that has its `dtype` as None by default. 
+
+```python
+# Assign the filename: file
+file = 'titanic.csv'
+
+# Import file using np.recfromcsv: d
+d = np.recfromcsv()
+
+# Print out the first three entries of da
+print(d[:3])
+
+```

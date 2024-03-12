@@ -28,4 +28,7 @@ print(data)
 ### Correction
 The issue here is that you set `skiprows=0`, which means you are not skipping any rows. However, the first row in your data file contains column labels like 'label', which cannot be converted to a float. This is causing the error.
 
+```python
+data = np.loadtxt(file, delimiter='\t', skiprows=1, usecols=[0,2])
+```
 
