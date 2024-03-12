@@ -32,3 +32,4 @@ The issue here is that you set `skiprows=0`, which means you are not skipping an
 data = np.loadtxt(file, delimiter='\t', skiprows=1, usecols=[0,2])
 ```
 
+ 
