@@ -26,3 +26,5 @@ file = open(filename, mode='r') # 'r' is to read
 text = file.read()
 file.close()
 ```
+
+Is good practice to close the connection with a file, that's why we use the `file.close()` in the code. We can avoid to write the close function every time we open a file using a `with` statement. This will create a context where commands can be executed while the file is open, as the clause is closed the file will no longer be open. This is why the `with` statement is called a **Context Manager**.
