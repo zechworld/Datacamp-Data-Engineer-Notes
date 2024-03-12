@@ -38,7 +38,7 @@ with open ('huck_finn,txt', 'r') as file:
 
 We'll work with csv now. But first we need to clarify what a *flat file* is, they are basically text files that doesn't contain a structured relationship, hence is not related to a relational database. Flat files have *records (rows)* and *attribute (columns)*.
 
-Getting back to CSV files, this files are an _acronym_ for *Comma Separated Values* which in simple words means that the values in each row are separated by commas. In the other hand, the *plain text* files are files that have characters or sequences of them other than comas, such as a tab.
+Getting back to CSV files, this files are an _acronym_ for **Comma Separated Values** which in simple words means that the values in each row are separated by commas. In the other hand, the **plain text** files are files that have characters or sequences of them other than comas, such as a tab.
 
-We have to decide what type of file we are importing. If they consist entire of numbers and we want to store them as a *NumPy Array* we should use *NumPy Package*, or if we want to store data in a DataFrame, we should use the *Pandas Package*.
+We have to decide what type of file we are importing. If they consist entire of numbers and we want to store them as a **NumPy Array** we should use **NumPy Package**, or if we want to store data in a DataFrame, we should use the **Pandas Package**.
 
