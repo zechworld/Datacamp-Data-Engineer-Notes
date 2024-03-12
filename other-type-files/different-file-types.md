@@ -30,7 +30,6 @@ print(data.sheet_names)
 Sheets parsed into data variable
 
 ['1960-1966', '1967-1974', '1975-2011']
-			0   					1 					2 			(indexs)
 """
 
 #If we want to select a particular sheet we use
