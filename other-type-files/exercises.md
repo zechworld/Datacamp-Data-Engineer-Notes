@@ -36,5 +36,42 @@ xls = pd.ExcelFile(file)
 print(xls.sheet_names)
 
 # ['2002', '2004']
+```
+
+# Exercise 3
+In this exercise, you'll learn how to import any given sheet of your loaded .xlsx file as a DataFrame. You'll be able to do so by specifying either the sheet's name or its index.
+
+```python
+# Loading spreadsheet into xls
+xls = pd.ExcelFile('battledeath.xlsx')
+
+# Load a sheet inot a Dataframe by name: df1
+df1 = xls.parse('2004')
+
+# Print the head of the DataFrame df1
+print(df1.head())
+
+# Load a sheet inot a DataFrame by index: df2
+df2 = xls.parse(0)
+
+# Print the head of the DataFrame df2
+print(df2.head())
+```
+
+# Exercise 4
+Here you'll parse your spreadsheet and use additional arguments to skip rows, rename columns and select only prticular columns.
+
+```python
+# Parse the first sheet by index, skip the first row of data and name the columns 'Country' and 'AAM due to War (2002)' using the argument names
+df1 = xls.parse(0, skiprows=[0], names=['Country','AAM due to War (2002)'])
+
+# Print the head of the DataFrame df1
+print(df1.head())
+
+# Parse the second sheet by index. Parse only the first column with usecols, skip the the first row and rename the column 'Country'
+df2 = xls.parse('2004', usecols=[0], skiprows=[0], names=['Country'])
+
+# Print the head of the DataFrame df2
+print(df2.head())
 
 ```
