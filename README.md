@@ -4,11 +4,6 @@ Data Camp Notes from the track of Data Engineer in Datacamp
 [Data Camp Engineer Track](https://app.datacamp.com/learn/career-tracks/data-engineer-in-python)
 
 **Table of contents**
-- [Basic data importing with Python](#item-9)
-- [Intermediate data importing with Python](#item-10)
+- [Basic data importing with Python](https://github.com/zechworld/Datacamp-Data-Engineer-Notes/tree/main/9-Introduction-to-importing-Data-in-Python)
+- [Intermediate data importing with Python](https://github.com/zechworld/Datacamp-Data-Engineer-Notes/tree/main/10-Intermediate-importing-data-in-Python)
 
-<a id="item-9"></a>
-# Basic importing data with Python
-
-<a id="item-10"></a>
-# Intermediate importing data with Python
