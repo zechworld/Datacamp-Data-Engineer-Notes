@@ -48,11 +48,67 @@ sales.info()
 RangeIndex: 31465 entries, 0 to 31464
 Data columns (total 3 columns):
 SalesOrderID			31465 non-null int64
-Revenue    				31465 non-null object
+Revenue 			31465 non-null object
 Quantity 			31465 non-null int64
 dtypes: int64(2), object(1)
-memory usage: 737.5+ KB
+memory usage: 737.5+ KB 
 ```
+
+Now, if we want to sum this values we'll have a large string with all the revenues concatenated. Remember, `sum of strings = concatenation`.
+
+```python
+# Print sum of all Revenue column
+sales['Revenue'].sum()
+```
+```bash
+'23153$1457$36865$32474$472$27510$16158$569$6876$40487...
+```
+
+We can fix this eliminating the $ sign from the string and then converting that value into an integer:
+
+```python
+#Remove $ from Revenue column
+sales['Revenue'] = sales['Revenue'].str.strip('$')
+sales['Revenue'] = sales['Revenue'].astype('int')
+
+# Verify that Revenue is now an Integer
+assert sales['Renvenue'].dtype = 'int' # The assert will return something only when encounters an error
+```
+
+## Numeric or categorical
+When it comes to data types we must first try to determine if it is a `numeric` type of data or a `categorical` type of data. We say a type of data is `categorical` when it has a `finite set` of possible categories.
+
+For example, this would be a categorical data:
+
+| marriage_status | meaning |
+|---|---|
+|0| never married|
+|1| married|
+|2| separated|
+|3| divorced|
+
+The problem is that it will be imported to a `Numeric` type of data and that will be misleading.
+
+||marriage_status||
+|--|--|--|
+|...|3|...|
+|...|1|...|
+|...|2|...|
+
+```python
+df['marriage_status'].describe()
+```
+||marriage_status|
+|--|--|
+|mean|1.4|
+|std| 0.20|
+|min|0.00|
+|50%|1.8|
+|*rest of summary statistics|
+
+What we can do is apply the method seen earlir `.astype()` and specify the type as `category` to fix this issue
+
+
 
 
 
