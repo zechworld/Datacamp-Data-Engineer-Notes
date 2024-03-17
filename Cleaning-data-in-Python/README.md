@@ -31,7 +31,6 @@ We can see that the revenue column has a `$` sign. If we want to calculate the t
 sales.dtypes
 ```
 
-| SalesOrderID | int64 |
 |---|---|
 |SalesOrderID | int64 |
 |Revenue| object |
