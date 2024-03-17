@@ -106,7 +106,20 @@ df['marriage_status'].describe()
 |50%|1.8|
 |*rest of summary statistics|
 
-What we can do is apply the method seen earlir `.astype()` and specify the type as `category` to fix this issue
+This summary statistics is misleading because the marriage status has been imported as a Numeric type. What we can do is apply the method seen earlir `.astype()` and specify the type as `category` to fix this issue.
+
+```python
+df["marriage_status"] = df["marriage_status"].astype('category')
+df.describe()
+```
+||marriage_status|
+|--|--|
+|count|241|
+|unique|4|
+|top|1|
+|freq|120|
+
+
 
 
 
