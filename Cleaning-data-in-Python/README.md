@@ -35,7 +35,25 @@ sales.dtypes
 |---|---|
 |SalesOrderID | int64 |
 |Revenue| object |
-|Quatity | int64
+|Quatity | int64 |
+| dtype: object |
+
+We can see the column revenue is saved as an Object, which is how Pandas store strings. Also, we can check data types with the `.info()` method:
+
+```python
+sales.info()
+```
+```bash
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 31465 entries, 0 to 31464
+Data columns (total 3 columns):
+SalesOrderID			31465 non-null int64
+Revenue     			31465 non-null object
+Quantity 					31465 non-null int64
+dtypes: int64(2), object(1)
+memory usage: 737.5+ KB
+```
+
 
 
 
