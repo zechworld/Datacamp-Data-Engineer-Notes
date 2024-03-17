@@ -120,6 +120,18 @@ df.describe()
 |freq|120|
 
 
+Manipulating and analyzing data with incorrect types coud lead to compromised analysis as you go along the Data Science Workflow.
+
+As a `good practice` is always recommendable to check the data types of your columns using the attribute `.dtypes` or the `info()` method.
+
+Examples of some data types
+
+|Numeric|Text|Dates|
+|--|--|--|
+|Number of points on customer loyalty card| First name| Order dateof a product|
+|Number of items bought in a basket|City of residence| Birthdates of clients|
+|Salary earned monthly| Shipping address of a customer| |
+
 
 
 
