@@ -79,5 +79,23 @@ user_signups['subscription_date'] = pd.to_datetime(user_signups['subscription_da
 # We could have converted the object into date using another methods but it would've 
 # taken another steps to do the same this line of code does really easy
 ```
+Now that the column is of type `date` we can think how we are going to filter the values that are in the future and that we must eliminate. For this, we can take two options. The `first option` is to create a `variable` with today's date using the `date.today` and then, specifying that all dates should be less than today. The `second option` involves doing something similar to the average rating, dropping all values that exceed the date of today.
 
+### Drop the data
+```python
+# Drop values using filtering
+user_signups = user_signups[user_signups['subscription_date'] < today_date]
 
+# Drop values using .drop()
+user_name.drop(user_signups[user_signups['subscription_date'] > today_date].index, inplace=True)
+```
+
+### Hardcore dates with upper limit
+```python
+# Drop values using filtering
+user_signups.loc[user_signups['subscription_date'] > today_date, 'subscription_date'] = today_date
+
+# Assert if true
+# Make sure to chain the .date(), otherwise you would get a timestamp
+assert user_signups.subscription_date.max().date() <= today_date
+```
