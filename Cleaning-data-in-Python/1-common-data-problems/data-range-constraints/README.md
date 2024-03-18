@@ -83,6 +83,8 @@ Now that the column is of type `date` we can think how we are going to filter th
 
 ### Drop the data
 ```python
+today_date = dt.date.today()
+
 # Drop values using filtering
 user_signups = user_signups[user_signups['subscription_date'] < today_date]
 
