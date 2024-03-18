@@ -76,7 +76,8 @@ As we can see, the `subscription_date`'s type is `object` and it should be `date
 ```python
 user_signups['subscription_date'] = pd.to_datetime(user_signups['subscription_date']).dt.date
 
-# We could have converted the object into date using another methods but it would've taken another steps to do the same this line of code does really easy
+# We could have converted the object into date using another methods but it would've 
+# taken another steps to do the same this line of code does really easy
 ```
 
 
