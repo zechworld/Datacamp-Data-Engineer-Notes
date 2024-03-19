@@ -46,8 +46,8 @@ height_weight[duplicates].sort_values(by='first_name')
 
 ||first_name|last_name|address|height|weight|
 |--|--|--|--|--|--|
-*|22|Cole|Palmer|8366 At, Street|178|91|*
-*|102|Cole|Palmer|8366 At, Street|178|91|*
+|22|Cole|Palmer|8366 At, Street|178|91|
+|102|Cole|Palmer|8366 At, Street|178|91|
 |28|Desirae|Shannon|14 Vancouver Drive|195|83|
 |103|Desirae|Shannon|14 Vancouver Drive|196|83|
 |1|Ivor|Pierce|102-3364 Non Road|168|66|
@@ -55,7 +55,32 @@ height_weight[duplicates].sort_values(by='first_name')
 |37|Mary|Colon|4674 Ut Rd.|179|75|
 |100|Mary|Colon|4674 Ut Rd.|179|75|
 
+We'll apply the method `.drop_duplicates()` that will make sure to erase those rows that are `complete duplicates`, leaving one copy behind. This method accepts the next arguments:
 
-|
+* `subset`: List of columns names to check for duplication 
+* `keep`: Whether to keep `first`, `last`, or `all(False)` duplicate values
+* `inplace`: Drop duplicated rows directly inside DataFrame without creating new object (True)
+
+```python
+# Drop duplicates
+height_weight.drop_duplicates(inplace=True)
+```
+Then, this would be the remaining duplicate values we alreafy found:
+
+```python
+# Output duplicate values
+column_names = ['first_name', 'last_name', 'address']
+duplicates = height_weight.duplicated(subset = column_names, keep = False)
+height_weight[duplicates].sort_values(by = 'first_name')
+```
+
+||first_name|last_name|address|height|weight|
+|--|--|--|--|--|--|
+|28|Desirae|Shannon|14 Vancouver Drive|195|83|
+|103|Desirae|Shannon|14 Vancouver Drive|196|83|
+|1|Ivor|Pierce|102-3364 Non Road|168|66|
+|101|Ivor|Pierce|102-3364 Non Road|168|88|
+
+
 
 
