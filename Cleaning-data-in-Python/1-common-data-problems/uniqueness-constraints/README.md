@@ -46,14 +46,16 @@ height_weight[duplicates].sort_values(by='first_name')
 
 ||first_name|last_name|address|height|weight|
 |--|--|--|--|--|--|
-|22|Cole|Palmer|8366 At, Street|178|91|
-|102|Cole|Palmer|8366 At, Street|178|91|
+*|22|Cole|Palmer|8366 At, Street|178|91|*
+*|102|Cole|Palmer|8366 At, Street|178|91|*
 |28|Desirae|Shannon|14 Vancouver Drive|195|83|
 |103|Desirae|Shannon|14 Vancouver Drive|196|83|
 |1|Ivor|Pierce|102-3364 Non Road|168|66|
 |101|Ivor|Pierce|102-3364 Non Road|168|88|
 |37|Mary|Colon|4674 Ut Rd.|179|75|
 |100|Mary|Colon|4674 Ut Rd.|179|75|
+
+
 |
 
 
