@@ -65,7 +65,7 @@ We'll apply the method `.drop_duplicates()` that will make sure to erase those r
 # Drop duplicates
 height_weight.drop_duplicates(inplace=True)
 ```
-Then, this would be the remaining duplicate values we alreafy found:
+Then, this would be the remaining duplicate values we already found:
 
 ```python
 # Output duplicate values
@@ -82,5 +82,25 @@ height_weight[duplicates].sort_values(by = 'first_name')
 |101|Ivor|Pierce|102-3364 Non Road|168|88|
 
 
+Now, to eliminate the last duplicates we could use statistical measures to combine each set of duplicated values. We could say that we want to combine each set into one single row, and for that we would need to think in a way to bind the two records.
 
+In case of the `height`, we could say we need the `maximum` value out of the two because it could be the most updated data; in case of the `weight` we could say that we need the `mean / average` between the two values. It's important to say that deciding what to do and choosing which statistical measure to use will depend `entirely on common sense understanding of our data`.
 
+To do what we mentioned, we need to create a `dictionary` called summaries specifying which functions will be parsed, which will instruct the `.groupby()` to return the maximum and mean. We then chain the `.agg()` method that allows us to run a function to the aggregation chain, in this case, it will pass the `summaries` dictionary to the `.groupby()` method to read the functions specified inside. We add the `.reset_index()` to have numbered indices in the final output. Lastly, we verify the duplicates array to see if we still have duplicated rows.
+
+```python
+# Group by column names and produce statistical summaries
+column_names = ['first_name', 'last_name', 'address']
+summaries = {'height': 'max', 'weight': 'mean'}
+
+height_weight = height_weight.groupby(by = column_names).agg(summaries).reset_index()
+```
+```python
+# Make sure aggregation is done
+duplicates = height_weight.duplicated(subset = column_names, keep = False)
+height_weight[duplicates].sort_values(by = 'first_name')
+```
+
+||first_name|last_name|address|height|weight|
+|--|--|--|--|--|--|
+|||||||
