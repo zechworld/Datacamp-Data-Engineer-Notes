@@ -81,3 +81,27 @@ In our example, if we do a `Left Anti join` we would have as result all the data
 |Z+|***O+***|B+|
 |Z+|***B-***|AB-|
 |Z+|***O+***|B+|
+
+Lets do this in Python:
+
+We need to get all inconsistent data in the `blood_type` column of the `study_data`. We can do this by creating a `set` that will hold the inconsistent values by using the method `.difference()` and passing as argument the `blood_type` column from the `correct categories`, therefore generating a difference between one DataFrame and the other one.
+
+```python
+inconsistent_categories = set(study_data['blood_type']).difference(categories['blood_type'])
+
+print(inconsistent_categories) # {'Z+'}
+# As we need to remember, a set will hold a unique value.
+# This means if incounters 234 ocurrences of Z+ it will only
+# Save one inside the {}
+```
+
+Then we need to find all inconsistent rows with this `"filter (inconsistent_categories)"` we've just created. We'll use the `isin()` method that returns a list of `boolean values` using the column `blood_type` from the study_data and finally we can `subset` those values that are `true` for the inconsistent data.
+
+```python
+# Get and print rows with incosistent categories
+inconsistent_rows = study_data['blood_type'].isin(inconsistent_categories)
+study_data[inconsistent_rows]
+```
+||name|birthday|blood_type|
+|--|--|--|--|
+|5|Jennifer|2019-12-17|Z+|
