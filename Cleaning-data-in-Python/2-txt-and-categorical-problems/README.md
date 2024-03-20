@@ -32,9 +32,6 @@ study_data = pd.read_csv('study.csv')
 
 ||blood_type|
 |--|--|
-
-||blood_type|
-|--|--|
 |1|O-|
 |2|O+|
 |3|A-|
