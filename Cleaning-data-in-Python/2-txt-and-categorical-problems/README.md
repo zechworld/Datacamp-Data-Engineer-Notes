@@ -29,6 +29,7 @@ study_data = pd.read_csv('study.csv')
 |7|Keith|2019-04-19|AB+|
 
 ### Correct possible blood type
+
 ||blood_type|
 |-–|--|
 |1|O-|
@@ -60,22 +61,22 @@ In our example, if we do a `Left Anti join` we would have as result all the data
 
 |study_data | joined|categories|
 |--|--|--|
-|Z+|A-|B+|
-|Z+|O-|B+|
-|Z+|AB+|AB-|
-|Z+|A+|AB-|
-|Z+|O+|B+|
-|Z+|B-|AB-|
-|Z+|O+|B+|
+|*Z+*|A-|B+|
+|*Z+*|O-|B+|
+|*Z+*|AB+|AB-|
+|*Z+*|A+|AB-|
+|*Z+*|O+|B+|
+|*Z+*|B-|AB-|
+|*Z+*|O+|B+|
 
 ### Inner Join
 #### Data Return: All rows except those with Z+, B+ and AB- (joined header)
 |study_data | joined|categories|
 |--|--|--|
-|Z+|A-|B+|
-|Z+|O-|B+|
-|Z+|AB+|AB-|
-|Z+|A+|AB-|
-|Z+|O+|B+|
-|Z+|B-|AB-|
-|Z+|O+|B+|
+|Z+|*A-*|B+|
+|Z+|*O-*|B+|
+|Z+|*AB+*|AB-|
+|Z+|*A+*|AB-|
+|Z+|*O+*|B+|
+|Z+|*B-*|AB-|
+|Z+|*O+*|B+|
