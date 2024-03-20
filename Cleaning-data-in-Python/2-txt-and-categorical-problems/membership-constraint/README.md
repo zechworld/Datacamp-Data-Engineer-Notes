@@ -105,3 +105,19 @@ study_data[inconsistent_rows]
 ||name|birthday|blood_type|
 |--|--|--|--|
 |5|Jennifer|2019-12-17|Z+|
+
+The last step we need to do is to drop the `inconsistent` rows and keep the one `consistent`. We can use the `~`symbol while subsetting which returns `everything except`inconsistent rows.
+
+```python
+# Drop inconsistent categories and get consistent data only
+consistent_data = study_data[~inconsistent_rows]
+```
+
+### Example
+
+|Membership / Categorical Constraint | Other Constraint
+|--|--|
+|A `GPA` column containing a `Z-` grade|A `revenue`column represented as a string|
+|A `has_loan`
+
+
