@@ -31,7 +31,10 @@ study_data = pd.read_csv('study.csv')
 ### Correct possible blood type
 
 ||blood_type|
-|-–|--|
+|--|--|
+
+||blood_type|
+|--|--|
 |1|O-|
 |2|O+|
 |3|A-|
@@ -55,9 +58,10 @@ There are two main types of joins we need to take in consideration: `anti joins`
 ---
 In our example, if we do a `Left Anti join` we would have as result all the data in study with inconsistencies in the blood type.
 
+*(We'lll use tables to show how the distributions are made, but this example gets easier to understand if using a `Venn Diagram`)*
+
 ### Left Anti Join
 #### Data Return: study_data with Z+ inconsistency (study_data header)
-*(We'lll use tables to show how the distributions are made, but this example gets easier to understand if using a `Venn Diagram`)
 
 |study_data | joined|categories|
 |--|--|--|
