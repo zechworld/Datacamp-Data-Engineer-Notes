@@ -44,7 +44,18 @@ duplicates = height_weight.duplicated(subset = column_names, kee
 height_weight[duplicates].sort_values(by='first_name')
 ```
 
-||first_name|last_name|address|height|weight|
+|This Data Engineer will work alongside experienced Data Engineer colleagues to deliver leading edge data pipelines
+and integrations bringing together diverse and complex data, to advance ESR’s scientific value. Specifically, providing
+expertise that enables ESR to push today’s boundaries so we can see beyond the horizon into the future and drive
+action that solves the complex problems for New Zealand and the Pacific region is facing in terms of the environment,
+health and forensics.
+This includes collaboratively contributing to projects and providing specialised expertise. The Data Engineer will work
+closely with our experts within ESR and also external partners and stakeholders, to derive value from data. And will
+contribute to the development of the skills and capability of their colleagues in the domain of data science. There will be
+a strong focus on working to deliver overseas development projects in the Pacific Region. The role will initially have a
+strong focus on delivery of information system development in water and sanitation sector in Pacific Island countries.
+A level of initiative and flexibility appropriate to the nature of the role is required, and as such the contents of this
+position description are not intended to be an exhaustive list of requirements.|first_name|last_name|address|height|weight|
 |--|--|--|--|--|--|
 |22|Cole|Palmer|8366 At, Street|178|91|
 |102|Cole|Palmer|8366 At, Street|178|91|
