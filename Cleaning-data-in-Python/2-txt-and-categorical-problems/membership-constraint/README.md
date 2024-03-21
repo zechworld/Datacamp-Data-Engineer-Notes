@@ -115,7 +115,7 @@ consistent_data = study_data[~inconsistent_rows]
 
 ### Example
 
-|Membership / Categorical Constraint | Other Constraint
+|Membership / Categorical or Constraint | Other Constraint
 |--|--|
 |A `GPA` column containing a `Z-` grade|A `revenue`column represented as a string|
 |A `has_loan`
